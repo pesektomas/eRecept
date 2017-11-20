@@ -1,0 +1,15 @@
+version: '2'
+services:
+
+    php7:
+        build: ./docker/php7
+        container_name: php7.1_erecept
+
+        volumes_from:
+          - data 
+
+    data:
+        image: busybox:latest
+
+        volumes:
+          - ./erecept:/srv
