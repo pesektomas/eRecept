@@ -12,4 +12,4 @@ services:
         image: busybox:latest
 
         volumes:
-          - ./erecept:/srv
+          - ./:/srv

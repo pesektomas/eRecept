@@ -1,5 +1,0 @@
-parameters:
-	ignoreErrors:
-#		- '#PHPUnit_Framework_MockObject_MockObject(?:\|(?:[\\a-zA-Z0-9_]+))* given#'
-		- '#does not accept PHPUnit_Framework_MockObject_MockObject#'
-		- '#Access to private property \$soapClient of class eRecept\\Client#'
