@@ -21,8 +21,8 @@ class CreatePrescriptionRequestTest extends \PHPUnit\Framework\TestCase
 			'',
 			'',
 			'',
-			'17b5c860-b570-11e7-abc4-cec278b6b50a',
-			'Test1234'
+			'123',
+			'123'
 		);
 
 		$medicines = [];
@@ -159,7 +159,7 @@ class CreatePrescriptionRequestTest extends \PHPUnit\Framework\TestCase
 					'Pohlavi' => 'M',
 				],
 				'Predepisujici' => [
-					'Lekar' => '17b5c860-b570-11e7-abc4-cec278b6b50a',
+					'Lekar' => '123',
 					'Oddeleni' => '',
 					'ICZ' => '1000000',
 					'ICP' => '1000001',
