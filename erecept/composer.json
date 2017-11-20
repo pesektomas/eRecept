@@ -1,5 +1,5 @@
 {
-    "name": "medoro/erecept",
+    "name": "pesovo/eRecept",
     "description": "Client for SUKL eRecept portal in Czech Republic",
     "license": "MIT",
     "type": "library",
@@ -12,6 +12,7 @@
         {
             "name": "Tomas Pesek",
             "homepage": "https://github.com/pesovo"
+            "role": "Developer"
         }
     ],
     "support": {
