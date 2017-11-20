@@ -1,0 +1,57 @@
+{
+    "name": "pesovo/eRecept",
+    "description": "Client for SUKL eRecept portal in Czech Republic",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["sukl", "erecept", "soap"],
+    "authors": [
+        {
+            "name": "Medoro s.r.o.",
+            "homepage": "http://www.medoro.org"
+        },
+        {
+            "name": "Tomas Pesek",
+            "homepage": "https://github.com/pesovo"
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/"
+    },
+    "require": {
+        "ext-openssl": "*",
+        "ext-soap": "*",
+        "php": "^7.1",
+        "consistence/consistence": "^1.0.0",
+        "robrichards/xmlseclibs": "^2.0",
+        "ramsey/uuid": "^3.5"
+    },
+    "require-dev": {
+        "consistence/coding-standard": "^2.0.0",
+        "jakub-onderka/php-parallel-lint": "^0.9.2",
+        "slevomat/coding-standard": "^3.0",
+        "phpunit/phpunit": "^6.2.0",
+        "phpstan/phpstan": "^0.7.0",
+        "guzzlehttp/guzzle": "^6.2",
+        "composer/ca-bundle": "^1.0",
+        "phing/phing": "^2.16"
+    },
+    "autoload": {
+        "psr-4": {
+            "eRecept\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "eRecept\\": "tests/eRecept"
+        }
+    },
+    "suggest": {
+        "guzzlehttp/guzzle": "For usage of bundled GuzzleSoapClientDriver"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}

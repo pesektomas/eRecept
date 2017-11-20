@@ -1,8 +1,8 @@
 /.idea
-erecept/build/log
-erecept/vendor
-erecept/composer.lock
-erecept/tests/erecept.neon
-erecept/cert/cuer.pem
-erecept/cert/private.key
-erecept/cert/crt.pem
+build/log
+vendor
+composer.lock
+tests/erecept.neon
+cert/cuer.pem
+cert/private.key
+cert/crt.pem
