@@ -8,7 +8,7 @@ class Configuration
 	/** @var  \eRecept\Environment */
 	private $environment;
 
-	/** @var  string */
+	/** @var  \eRecept\EreceptVersion */
 	private $version;
 
 	/** @var  string */
@@ -20,7 +20,7 @@ class Configuration
 	/** @var string */
 	private $httpsCertificatePassword;
 
-	public function __construct(Environment $environment, string $version, string $clientSw, string $httpsCertificate, string $httpsCertificatePassword)
+	public function __construct(Environment $environment, EreceptVersion $version, string $clientSw, string $httpsCertificate, string $httpsCertificatePassword)
 	{
 		$this->environment = $environment;
 		$this->version = $version;
@@ -34,7 +34,7 @@ class Configuration
 		return $this->environment;
 	}
 
-	public function getVersion(): string
+	public function getVersion(): EreceptVersion
 	{
 		return $this->version;
 	}

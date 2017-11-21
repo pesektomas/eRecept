@@ -8,6 +8,7 @@ use eRecept\Configuration;
 use eRecept\Cryptography\CryptographyService;
 use eRecept\Driver\GuzzleSoapClientDriver;
 use eRecept\Environment;
+use eRecept\EreceptVersion;
 use eRecept\UserPersonalData;
 
 class FunctionTest extends \PHPUnit\Framework\TestCase
@@ -28,7 +29,7 @@ class FunctionTest extends \PHPUnit\Framework\TestCase
 
 		$this->configuration = new Configuration(
 			Environment::get(Environment::CUER_DOCTOR),
-			'201704A',
+			EreceptVersion::get(EreceptVersion::V_201704A),
 			'0123456789AB',
 			__DIR__ . $neonConfig['connection']['certificate'],
 			$neonConfig['connection']['certificatePassword']
