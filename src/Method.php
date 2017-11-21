@@ -13,4 +13,6 @@ class Method extends \Consistence\Enum\Enum
 
 	public const METHOD_UPDATE_PRESCRIPTION = 'ZmenitPredpis';
 
+	public const METHOD_CANCEL_PRESCRIPTION = 'ZrusitPredpis';
+
 }

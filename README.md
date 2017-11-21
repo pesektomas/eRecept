@@ -87,7 +87,7 @@ Sukl pošle soubor pfx, pro PHP ho musíme překonvertovat na PEM. Příkaz je n
 | NacistVerze                       | Všichni  | NE           |
 | ZalozitPredpis                    | Lékař    | ANO          |
 | ZmenitPredpis                     | Lékař    | ANO          |
-| ZrusitPredpis                     | Lékař    | NE           |
+| ZrusitPredpis                     | Lékař    | ANO          |
 | NacistInformaceOZrusenemPredpisu  | Lékař    | NE           |
 | NacistPredpis                     | Všichni  | NE           |
 | StahnoutPruvodku                  | Všichni  | NE           |
@@ -111,4 +111,3 @@ Sukl pošle soubor pfx, pro PHP ho musíme překonvertovat na PEM. Příkaz je n
 | ZrusitVydejOTC                    | Lékárník | NE           |
 | NacistVydejOTC                    | Lékárník | NE           |
 | NacistInformaceOZrusenemVydejiOTC | Lékárník | NE           |
-|  
