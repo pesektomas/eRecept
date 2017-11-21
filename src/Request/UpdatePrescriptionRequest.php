@@ -2,6 +2,7 @@
 
 namespace eRecept\Request;
 
+use eRecept\Method;
 use eRecept\Request\Entity\CreatePrescription;
 use eRecept\UserPersonalData;
 
@@ -32,6 +33,11 @@ class UpdatePrescriptionRequest extends CreatePrescriptionRequest implements Req
 				'Signature' => null,
 			],
 		];
+	}
+
+	public function getMethod(): Method
+	{
+		return Method::get(Method::METHOD_UPDATE_PRESCRIPTION);
 	}
 
 }

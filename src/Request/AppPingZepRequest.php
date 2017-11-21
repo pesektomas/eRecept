@@ -2,6 +2,7 @@
 
 namespace eRecept\Request;
 
+use eRecept\Method;
 use eRecept\Request\Entity\AppPingZEP;
 
 class AppPingZepRequest implements Request
@@ -26,6 +27,11 @@ class AppPingZepRequest implements Request
 				'Signature' => null,
 			],
 		];
+	}
+
+	public function getMethod(): Method
+	{
+		return Method::get(Method::METHOD_APP_PING_ZEP);
 	}
 
 }

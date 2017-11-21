@@ -3,7 +3,6 @@
 namespace eRecept\FunctionTest;
 
 use eRecept\EreceptVersion;
-use eRecept\Method;
 use eRecept\Request\CreatePrescriptionRequest;
 use eRecept\Request\Entity\CreatePrescription;
 use eRecept\Request\Entity\Document\Doctor;
@@ -88,7 +87,7 @@ class CreateRequestFunctionTest extends FunctionTest
 			)
 		);
 
-		$response = $this->getClient(true)->send(Method::get(Method::METHOD_CREATE_PRESCRIPTION), new CreatePrescriptionRequest($createPrescription, $this->userPersonalData));
+		$response = $this->getClient(true)->send(new CreatePrescriptionRequest($createPrescription, $this->userPersonalData));
 
 		$this->assertInstanceOf(ZalozitPredpisResponse::class, $response);
 		$this->assertTrue($response->isValid());

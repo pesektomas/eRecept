@@ -3,6 +3,7 @@
 namespace eRecept\Request;
 
 use eRecept\Formatter;
+use eRecept\Method;
 use eRecept\Request\Entity\CreatePrescription;
 use eRecept\UserPersonalData;
 
@@ -168,6 +169,11 @@ class CreatePrescriptionRequest implements Request
 				'Signature' => null,
 			],
 		];
+	}
+
+	public function getMethod(): Method
+	{
+		return Method::get(Method::METHOD_CREATE_PRESCRIPTION);
 	}
 
 }

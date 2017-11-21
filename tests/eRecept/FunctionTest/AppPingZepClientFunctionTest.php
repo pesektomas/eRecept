@@ -3,7 +3,6 @@
 namespace eRecept\FunctionTest;
 
 use eRecept\EreceptVersion;
-use eRecept\Method;
 use eRecept\Request\AppPingZepRequest;
 use eRecept\Request\Entity\AppPingZEP;
 use eRecept\Request\Entity\Message;
@@ -22,7 +21,7 @@ class AppPingZepClientFunctionTest extends FunctionTest
 			)
 		);
 
-		$response = $this->getClient(true)->send(Method::get(Method::METHOD_APP_PING_ZEP), new AppPingZepRequest($appPingZep));
+		$response = $this->getClient(true)->send(new AppPingZepRequest($appPingZep));
 
 		$this->assertInstanceOf(AppPingZEPResponse::class, $response);
 		$this->assertTrue($response->isValid());

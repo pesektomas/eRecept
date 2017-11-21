@@ -36,17 +36,17 @@ class Client
 		$this->setSignature = $setSignature;
 	}
 
-	public function send(Method $method, Request $request): Response
+	public function send(Request $request): Response
 	{
 		try {
-			$soapResponse = $this->getSoapClient()->sendRequest($method, $request->getData());
+			$soapResponse = $this->getSoapClient()->sendRequest($request->getMethod(), $request->getData());
 		} catch (DriverRequestFailedException $e) {
 			throw new FailedRequestException($request, $e);
 		} catch (\SoapFault $e) {
 			throw new FailedRequestException($request, $e);
 		}
 
-		$responseCls = ResponseLoader::loadResponse($method);
+		$responseCls = ResponseLoader::loadResponse($request->getMethod());
 		$responseCls->parse($soapResponse);
 
 		return $responseCls;

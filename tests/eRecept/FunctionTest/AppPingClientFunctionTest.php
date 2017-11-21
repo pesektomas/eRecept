@@ -3,7 +3,6 @@
 namespace eRecept\FunctionTest;
 
 use eRecept\EreceptVersion;
-use eRecept\Method;
 use eRecept\Request\AppPingRequest;
 use eRecept\Request\Entity\AppPing;
 use eRecept\Request\Entity\Message;
@@ -22,7 +21,7 @@ class AppPingClientFunctionTest extends FunctionTest
 			)
 		);
 
-		$response = $this->getClient()->send(Method::get(Method::METHOD_APP_PING), new AppPingRequest($appPing));
+		$response = $this->getClient()->send(new AppPingRequest($appPing));
 
 		$this->assertInstanceOf(AppPingResponse::class, $response);
 		$this->assertTrue($response->isValid());

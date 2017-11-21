@@ -2,6 +2,7 @@
 
 namespace eRecept\Request;
 
+use eRecept\Method;
 use eRecept\Request\Entity\AppPing;
 
 class AppPingRequest implements Request
@@ -33,6 +34,11 @@ class AppPingRequest implements Request
 	public function getMessage(): array
 	{
 		return $this->message;
+	}
+
+	public function getMethod(): Method
+	{
+		return Method::get(Method::METHOD_APP_PING);
 	}
 
 }

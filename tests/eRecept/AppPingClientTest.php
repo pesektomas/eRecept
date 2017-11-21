@@ -50,7 +50,7 @@ class AppPingClientTest extends FunctionTest
 			)
 			->willReturn($this->getResponseData());
 
-		$response = $this->client->send($method, $request);
+		$response = $this->client->send($request);
 		$this->assertTrue($response->isValid());
 	}
 
@@ -76,7 +76,7 @@ class AppPingClientTest extends FunctionTest
 			->willReturn($this->getResponseData());
 
 		try {
-			$this->client->send($method, $request);
+			$this->client->send($request);
 			$this->fail('test');
 		} catch (\Throwable $e) {
 			$this->assertTrue(true);

@@ -2,6 +2,8 @@
 
 namespace eRecept\Request;
 
+use eRecept\Method;
+
 interface Request
 {
 
@@ -9,5 +11,7 @@ interface Request
 	 * @return mixed[]
 	 */
 	public function getData(): array;
+
+	public function getMethod(): Method;
 
 }
