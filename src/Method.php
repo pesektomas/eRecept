@@ -9,6 +9,10 @@ class Method extends \Consistence\Enum\Enum
 
 	public const METHOD_APP_PING_ZEP = 'AppPingZEP';
 
+	public const METHOD_LOAD_ERRORS = 'NacistCiselnikChyb';
+
+	public const METHOD_LOAD_VERSIONS = 'NacistVerze';
+
 	public const METHOD_CREATE_PRESCRIPTION = 'ZalozitPredpis';
 
 	public const METHOD_UPDATE_PRESCRIPTION = 'ZmenitPredpis';

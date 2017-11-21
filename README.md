@@ -83,8 +83,8 @@ Sukl pošle soubor pfx, pro PHP ho musíme překonvertovat na PEM. Příkaz je n
 |-----------------------------------|----------|--------------|
 | AppPing                           | Všichni  | ANO          |
 | AppPingZEP                        | Všichni  | ANO          |
-| NacistCiselnikChyb                | Všichni  | NE           |
-| NacistVerze                       | Všichni  | NE           |
+| NacistCiselnikChyb                | Všichni  | ANO          |
+| NacistVerze                       | Všichni  | ANO          |
 | ZalozitPredpis                    | Lékař    | ANO          |
 | ZmenitPredpis                     | Lékař    | ANO          |
 | ZrusitPredpis                     | Lékař    | ANO          |
