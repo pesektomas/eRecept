@@ -1,3 +1,12 @@
+# Instalace
+
+```composer require pesovo/erecept```
+
+# Použití
+```
+
+```
+
 # První nastavení pro testy
 
 1. nahrát ssl certifikát do složky erecept/cert

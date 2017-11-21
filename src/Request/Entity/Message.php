@@ -2,6 +2,8 @@
 
 namespace eRecept\Request\Entity;
 
+use eRecept\EreceptVersion;
+
 class Message
 {
 
@@ -15,7 +17,7 @@ class Message
 	/**
 	 * XML Verze
 	 *
-	 * @var  string
+	 * @var \eRecept\EreceptVersion
 	 */
 	private $version;
 
@@ -33,7 +35,7 @@ class Message
 	 */
 	private $clientSw;
 
-	public function __construct(string $version, \DateTimeImmutable $sent, string $clientSw)
+	public function __construct(EreceptVersion $version, \DateTimeImmutable $sent, string $clientSw)
 	{
 		$this->messageId = \Ramsey\Uuid\Uuid::uuid4();
 		$this->version = $version;
@@ -46,7 +48,7 @@ class Message
 		return $this->messageId;
 	}
 
-	public function getVersion(): string
+	public function getVersion(): EreceptVersion
 	{
 		return $this->version;
 	}

@@ -2,6 +2,7 @@
 
 namespace eRecept\Request;
 
+use eRecept\EreceptVersion;
 use eRecept\Request\Entity\CreatePrescription;
 use eRecept\Request\Entity\Document\Doctor;
 use eRecept\Request\Entity\Document\Document;
@@ -29,7 +30,7 @@ class UpdatePrescriptionRequestTest extends \PHPUnit\Framework\TestCase
 
 		$createPrescription = new CreatePrescription(
 			new Message(
-				'123',
+				EreceptVersion::get(EreceptVersion::V_201704A),
 				new \DateTimeImmutable('2017-11-14 14:46:12', new \DateTimeZone('Europe/Prague')),
 				'123'
 			),
@@ -95,7 +96,7 @@ class UpdatePrescriptionRequestTest extends \PHPUnit\Framework\TestCase
 
 		$this->assertSame(
 			[
-				'Verze' => '123',
+				'Verze' => '201704A',
 				'Odeslano' => '2017-11-14T14:46:12+01:00',
 				'SW_Klienta' => '123',
 			],

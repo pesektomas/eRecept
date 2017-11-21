@@ -2,6 +2,7 @@
 
 namespace eRecept\FunctionTest;
 
+use eRecept\EreceptVersion;
 use eRecept\Method;
 use eRecept\Request\AppPingZepRequest;
 use eRecept\Request\Entity\AppPingZEP;
@@ -15,7 +16,7 @@ class AppPingZepClientFunctionTest extends FunctionTest
 	{
 		$appPingZep = new AppPingZEP(
 			new Message(
-				'201704A',
+				EreceptVersion::get(EreceptVersion::V_201704A),
 				new \DateTimeImmutable('now', new \DateTimeZone('Europe/Prague')),
 				'0123456789AB'
 			)

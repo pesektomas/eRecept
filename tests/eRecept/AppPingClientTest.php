@@ -102,7 +102,7 @@ class AppPingClientTest extends FunctionTest
 	{
 		$appPing = new AppPing(
 			new Message(
-				'123',
+				EreceptVersion::get(EreceptVersion::V_201704A),
 				new \DateTimeImmutable('2017-10-05 14:46:12', new \DateTimeZone('Europe/Prague')),
 				'123'
 			)

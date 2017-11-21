@@ -2,6 +2,7 @@
 
 namespace eRecept\Request;
 
+use eRecept\EreceptVersion;
 use eRecept\Request\Entity\AppPing;
 use eRecept\Request\Entity\Message;
 
@@ -12,7 +13,7 @@ class AppPingRequestTest extends \PHPUnit\Framework\TestCase
 	{
 		$appPing = new AppPing(
 			new Message(
-				'123',
+				EreceptVersion::get(EreceptVersion::V_201704A),
 				new \DateTimeImmutable('2017-10-05 14:46:12', new \DateTimeZone('Europe/Prague')),
 				'123'
 			)
@@ -34,7 +35,7 @@ class AppPingRequestTest extends \PHPUnit\Framework\TestCase
 
 		$this->assertSame(
 			[
-				'Verze' => '123',
+				'Verze' => '201704A',
 				'Odeslano' => '2017-10-05T14:46:12+02:00',
 				'SW_Klienta' => '123',
 			],

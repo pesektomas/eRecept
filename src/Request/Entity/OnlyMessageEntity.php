@@ -27,7 +27,7 @@ class OnlyMessageEntity
 	{
 		return [
 			'ID_Zpravy' => $this->message->getMessageId(),
-			'Verze' => $this->message->getVersion(),
+			'Verze' => $this->message->getVersion()->getValue(),
 			'Odeslano' => Formatter::formatDateTime($this->message->getSent()),
 			'SW_Klienta' => $this->message->getClientSw(),
 		];
